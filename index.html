@@ -1,0 +1,565 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>XT</title><meta name="author" content="协调人"><meta name="copyright" content="协调人"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="随便写点">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XT">
+<meta property="og:url" content="https://xie-tiao.github.io/index.html">
+<meta property="og:site_name" content="XT">
+<meta property="og:description" content="随便写点">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xie-tiao.github.io/img/avatar.png">
+<meta property="article:author" content="协调人">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xie-tiao.github.io/img/avatar.jpg">
+<meta name="twitter:site" content="https://twitter.com/0X_T0"><link rel="shortcut icon" href="/img/logo1_favicon.png"><link rel="canonical" href="https://xie-tiao.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":6,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#954e3e","bgDark":"#35717f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'XT',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-03-07 17:15:29'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/nav.css"><link rel="stylesheet" href="/css/top.css"><link rel="stylesheet" href="/code_color/vs2015.css"><link rel="stylesheet" href="/css/markdown.css"><script type="text/javascript">function hover(element, src) {
+  element.setAttribute('src', src);
+  element.parentElement.setAttribute('href', link);
+}</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/about/"><span> 簡介</span></a></div><div class="menus_item"><a class="site-page" href="/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><span> 聯係</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 作品</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa-solid fa-palette"></i><span> 插畫</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-brands fa-docker"></i><span> 設計</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-brands fa-android"></i><span> 開發</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/%E4%B8%BB0.png')"> <nav id="nav"><span id="blog-info"><a href="/" title="XT"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/logo1.png"/></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/about/"><span> 簡介</span></a></div><div class="menus_item"><a class="site-page" href="/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><span> 聯係</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 作品</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa-solid fa-palette"></i><span> 插畫</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-brands fa-docker"></i><span> 設計</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-brands fa-android"></i><span> 開發</span></a></li></ul></div></div></div><div id="nav-right"> <div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div class="top"></div><ul class="option_1"><li><div id="resume"><a href="/link/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/简介0.png" alt="resume" style="width: 9vw" onmouseover="hover(this, '/img/简介1.png', '/link/')" onmouseout="hover(this, '/img/简介0.png')"></a></div></li><li><div id="works"><a href="/link/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/作品0.png" alt="works" style="width: 6vw" onmouseover="hover(this, '/img/作品1.png', '/link/')" onmouseout="hover(this, '/img/作品0.png')"></a></div></li></ul><ul class="option_2"><li><div id="articles"><a href="/link/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/文章0.png" alt="articles" style="width: 6vw" onmouseover="hover(this, '/img/文章1.png', '/link/')" onmouseout="hover(this, '/img/文章0.png')"></a></div></li><li><div id="contact"><a href="/link/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/联系0.png" alt="contact" style="width: 9vw" onmouseover="hover(this, '/img/联系1.png', '/link/')" onmouseout="hover(this, '/img/联系0.png')"></a></div></li></ul></header><main class="layout hide-aside" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/424231303/" title="【小技巧】用Python批量重命名文件"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/20240307152051.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【小技巧】用Python批量重命名文件"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/424231303/" title="【小技巧】用Python批量重命名文件">【小技巧】用Python批量重命名文件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-03-07T09:03:59.923Z" title="更新于 2024-03-07 17:03:59">2024-03-07</time></span></div><div class="content">
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+    pa {
+        opacity: 0.5;
+    }
+    y{
+        color: #bd8748
+    }
+
+
+批量重命名
+我可是经常受此折磨，情况挺多的，慢慢补充
+
+况1点击查看内容没错！又是写边狱巴士的游戏脚本时遇到的问题
+
+
+  
+  
+
+如上图所示，不难发现两批文件的命名仅有一处kr和jp是不同的，在该情况下，可以利用Python写脚本进行批量重命名
+
+将以下代码复制到.py文件中，在待处理文件路径下运行即可
+12345678910111213import osimport shutil# 获取文件夹中的所有文件名file_names = os.listdir(&#x27;./&#x27;)# 循环遍历每个文件名for file_name in f ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/956840029/" title="【小技巧】Windows批量复制粘贴文件"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/20240307151410.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【小技巧】Windows批量复制粘贴文件"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/956840029/" title="【小技巧】Windows批量复制粘贴文件">【小技巧】Windows批量复制粘贴文件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-03-07T08:56:07.242Z" title="更新于 2024-03-07 16:56:07">2024-03-07</time></span></div><div class="content">
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+    pa {
+        opacity: 0.5;
+    }
+    y{
+        color: #bd8748
+    }
+
+
+简单的Windows批处理
+学会写个简单的.bat吧
+
+
+
+事件起因写边狱巴士的游戏脚本时，Pyinstaller打包出来还是会缺很多文件，每次打包都要手动复制粘贴这么多文件，简直折磨死我，还不如写一个bat让电脑批处理算了
+以该事件为例待处理的文件点击查看内容
+简单统计一下，我需要
+
+
+复制“E:\Project\Python\Limbus-Scripts\assets”文件夹及里面的所有文件“E:\Project\Python\Limbus-Scripts\log”文件夹及里面的所有文件“E:\Project\Python\Limbus-Sc ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/2210164185/" title="【小技巧】替换exe图标"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/20240307142335.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【小技巧】替换exe图标"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/2210164185/" title="【小技巧】替换exe图标">【小技巧】替换exe图标</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-03-07T08:56:11.875Z" title="更新于 2024-03-07 16:56:11">2024-03-07</time></span></div><div class="content">
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+    pa {
+        opacity: 0.5;
+    }
+    y{
+        color: #bd8748
+    }
+
+
+替换应用原本的exe图标
+这个真好用 Resource Hacker
+
+
+
+事件起因原因是用pyinstaller打包flet应用总是替换不了flet那个小鱼的图标，害我每次打包完，不得不手动自己替换掉（悲）
+解决方法点击查看内容6.4.0版本pyinstaller打包完的0.19.0版本flet应用，flet库会有个单独的文件夹###\dist\main\_internal\flet\bin\flet
+
+文件夹中有个带图标的flet.exe文件，在Resource Hacker打开它
+找到图标文件
+使用Action中的Replace Icon功 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/16107/" title="Hello World"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/20230801160604.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/16107/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-03-07T06:21:09.260Z" title="更新于 2024-03-07 14:21:09">2024-03-07</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+
+Quick StartCreate a new post1hexo new &quot;我的新文章&quot;
+
+More info: Writing
+Run server
+运行后可一直挂后台写文章，刷新页面
+
+12hexo cleanhexo s
+
+More info: Server
+Deploy to remote sites123hexo cleanhexo ghexo d
+
+More info: Deployment &amp; Generating
+Check SSH Connection
+每 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/1880208915/" title="【VUE】多语言切换/本地化框架"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/20240213113029.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【VUE】多语言切换/本地化框架"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/1880208915/" title="【VUE】多语言切换/本地化框架">【VUE】多语言切换/本地化框架</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-03-07T06:21:22.411Z" title="更新于 2024-03-07 14:21:22">2024-03-07</time></span></div><div class="content">
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+    pa {
+        opacity: 0.5;
+    }
+    r{
+        color: #d60202
+    }
+    y{
+        color: #bd8748
+    }
+
+
+暂时没想好怎么写
+总之先留个链接在这儿
+
+12链接：https://pan.baidu.com/s/1VfiesA9wltrHzPHzgVKv0Q 提取码：jn8u </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/3664133873/" title="【VUE】项目新建"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/20240129211523.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【VUE】项目新建"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/3664133873/" title="【VUE】项目新建">【VUE】项目新建</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-03-07T06:21:19.995Z" title="更新于 2024-03-07 14:21:19">2024-03-07</time></span></div><div class="content">
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+    pa {
+        opacity: 0.5;
+    }
+    r{
+        color: #d60202
+    }
+    y{
+        color: #bd8748
+    }
+
+
+记录一下Vue3项目的搭建
+有幸遇到一个非常不错的教程
+
+
+  
+
+  
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1Up4y1j7tX')
+      fetch('https://api.320.ink/api/b?id=BV1Up4y1j7tX').then(res=>res.json()).then(data=>{
+        dom.in ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/4112456168/" title="【VUE】移动端开发小技巧"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/20231123154241.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【VUE】移动端开发小技巧"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/4112456168/" title="【VUE】移动端开发小技巧">【VUE】移动端开发小技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-03-07T06:21:01.828Z" title="更新于 2024-03-07 14:21:01">2024-03-07</time></span></div><div class="content">
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+    pa {
+        opacity: 0.5;
+    }
+    r{
+        color: #d60202
+    }
+    y{
+        color: #bd8748
+    }
+
+
+Vue移动端项目如何使用手机预览调试最近在用Vue3写app，简单研究了下怎么在手机上实时预览效果，记录一下
+
+
+电脑和手机连接同一个WIFI点击查看内容以下方法二选一均可：
+
+电脑与手机连接同一个路由器，使用同一个wifi
+手机开热点，电脑连上手机热点
+
+
+
+查询本地IP地址点击查看内容打开cmd&#x2F;命令提示符，输入ipconfig回车，查看本地IPv4
+
+
+修改vue项目的IP地址点击查看内容这里用Vue3示例，Vue2也是同理
+
+
+
+找到项目中的config.j ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/141331137/" title="【随笔】日本游（含攻略）"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/20230807113324.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【随笔】日本游（含攻略）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/141331137/" title="【随笔】日本游（含攻略）">【随笔】日本游（含攻略）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-03-07T08:20:40.934Z" title="更新于 2024-03-07 16:20:40">2024-03-07</time></span></div><div class="content">
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+    pa {
+        opacity: 0.5;
+    }
+    r{
+        color: #d60202
+    }
+    y{
+        color: #bd8748
+    }
+
+
+ 2023-8-6 ~ 2023-8-16人生第一次出国，日本自由行，经历了很多，也学习了很多，时隔一天后还没有回家的实感，记录一下
+
+
+令和见闻
+点击查看内容
+日本主要靠左行，上下手扶电梯靠左，方向盘靠右，市区行车靠左，但高速公路靠右😳。不对，怎么大阪又是靠右了？京都东京又是靠左。。。。怎么不同地区规则还不一样啊？？？
+日本人好敏感
+走路时稍微碰到一下，就会立马让开，以示歉意。如果书柜间有人，会等人离开再进去，或者主动让开。（走在路上要时刻注意不碰到人，这样的环境压力也太 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/327765731/" title="【随笔/转载】命名规范（附勘误）"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/20230801144929.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【随笔/转载】命名规范（附勘误）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/327765731/" title="【随笔/转载】命名规范（附勘误）">【随笔/转载】命名规范（附勘误）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-03-07T08:20:59.645Z" title="更新于 2024-03-07 16:20:59">2024-03-07</time></span></div><div class="content">
+ 规范用语，文明沟通，服务你我
+
+
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+    r{
+        color: #d60202
+    }
+
+导航类
+
+
+中
+英
+
+
+
+导航
+nav
+
+
+主导航
+mainbav
+
+
+子导航
+subnav
+
+
+顶导航
+topnav
+
+
+边导航
+sidebar
+
+
+左导航
+leftsidebar
+
+
+右导航
+rightsidebar
+
+
+菜单
+menu
+
+
+子菜单
+submenu
+
+
+标题
+title
+
+
+摘要
+summary ? abstract
+
+
+页面结构
+
+
+中
+英
+
+
+
+容器
+container
+
+
+页头
+header
+
+
+内容
+content&#x2F;container
+
+
+页面主体
+main
+
+
+页尾
+footer
+
+
+导航
+nav
+
+
+侧栏
+sidebar
+
+
+栏目
+column ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/4041827687/" title="【长期更新】从零开始的建站记录/butterfly魔改记录"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/logo.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【长期更新】从零开始的建站记录/butterfly魔改记录"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/4041827687/" title="【长期更新】从零开始的建站记录/butterfly魔改记录">【长期更新】从零开始的建站记录/butterfly魔改记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-03-07T06:21:28.027Z" title="更新于 2024-03-07 14:21:28">2024-03-07</time></span></div><div class="content">
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+    pa {
+        opacity: 0.5;
+    }
+    y{
+        color: #bd8748
+    }
+
+蹭Github服务器部署Hexo
+跟着 安知鱼的教程 一步步搭建
+
+
+安装环境node.js和git等
+安装Hexo
+安装butterfly
+用Github Pages部署
+  
+
+  
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1zT411A7XL')
+      fetch('https://api.320.ink/api/b?id=BV1zT411A7XL').then(res=>res.json()).then(da ...</div></div></div></div></main><footer id="footer" style="background: #232836"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024  协调人</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-caret-down"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-caret-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">站内搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

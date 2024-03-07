@@ -1,0 +1,44 @@
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+#nav-right{
+    flex:1 1 auto;
+    justify-content: flex-end;
+    margin-left: auto;
+    display: flex;
+    flex-wrap:nowrap;
+}
+
+/* 顶栏子菜单修改 */
+#nav .menus_items .menus_item .menus_item_child li a {
+    padding: 2px 16px;
+}
+#nav .menus_items .menus_item .menus_item_child li {
+    margin: 6px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+#nav .menus_items .menus_item .menus_item_child:before {
+    top: -19px;
+}
+#nav .menus_items .menus_item:hover .menus_item_child {
+    display: flex;
+    right: auto;
+    left: -108px !important; /*水平居中用，微调*/
+    padding: 6px 4px;
+    box-sizing: content-box;
+    line-height: 35px;
+}
+.search-dialog hr:before {
+    color: #954e3e;
+}
+
+#algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:nth-child(2) {
+    fill: #954e3e;
+}

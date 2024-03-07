@@ -1,0 +1,603 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>【长期更新】从零开始的建站记录/butterfly魔改记录 | XT</title><meta name="author" content="协调人"><meta name="copyright" content="协调人"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="hr {         border: none;         border-top: 1px dashed #999;         margin: 20px 0;     }     pa {         opacity: 0.5;     }     y{         color: #bd8748     }  蹭Github服务器部署Hexo 跟着 安知鱼的教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【长期更新】从零开始的建站记录&#x2F;butterfly魔改记录">
+<meta property="og:url" content="https://xie-tiao.github.io/posts/4041827687/index.html">
+<meta property="og:site_name" content="XT">
+<meta property="og:description" content="hr {         border: none;         border-top: 1px dashed #999;         margin: 20px 0;     }     pa {         opacity: 0.5;     }     y{         color: #bd8748     }  蹭Github服务器部署Hexo 跟着 安知鱼的教程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xie-tiao.github.io/pic/covers/logo.png">
+<meta property="article:published_time" content="2023-07-22T03:04:37.000Z">
+<meta property="article:modified_time" content="2024-03-07T06:21:28.027Z">
+<meta property="article:author" content="协调人">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xie-tiao.github.io/img/avatar.jpg">
+<meta name="twitter:site" content="https://twitter.com/0X_T0"><link rel="shortcut icon" href="/img/logo1_favicon.png"><link rel="canonical" href="https://xie-tiao.github.io/posts/4041827687/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":6,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#954e3e","bgDark":"#35717f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '【长期更新】从零开始的建站记录/butterfly魔改记录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-07 14:21:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/nav.css"><link rel="stylesheet" href="/css/top.css"><link rel="stylesheet" href="/code_color/vs2015.css"><link rel="stylesheet" href="/css/markdown.css"><script type="text/javascript">function hover(element, src) {
+  element.setAttribute('src', src);
+  element.parentElement.setAttribute('href', link);
+}</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/about/"><span> 簡介</span></a></div><div class="menus_item"><a class="site-page" href="/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><span> 聯係</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 作品</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa-solid fa-palette"></i><span> 插畫</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-brands fa-docker"></i><span> 設計</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-brands fa-android"></i><span> 開發</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/./pic/covers/logo.png')"> <nav id="nav"><span id="blog-info"><a href="/" title="XT"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/logo1.png"/></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/about/"><span> 簡介</span></a></div><div class="menus_item"><a class="site-page" href="/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><span> 聯係</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 作品</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa-solid fa-palette"></i><span> 插畫</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-brands fa-docker"></i><span> 設計</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-brands fa-android"></i><span> 開發</span></a></li></ul></div></div></div><div id="nav-right"> <div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【长期更新】从零开始的建站记录/butterfly魔改记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-22T03:04:37.000Z" title="发表于 2023-07-22 11:04:37">2023-07-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-07T06:21:28.027Z" title="更新于 2024-03-07 14:21:28">2024-03-07</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><style>
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+    pa {
+        opacity: 0.5;
+    }
+    y{
+        color: #bd8748
+    }
+</style>
+<h1 id="蹭Github服务器部署Hexo"><a href="#蹭Github服务器部署Hexo" class="headerlink" title="蹭Github服务器部署Hexo"></a>蹭Github服务器部署Hexo</h1><blockquote>
+<p>跟着 <a target="_blank" rel="noopener" href="https://blog.anheyu.com/posts/ddae.html">安知鱼的教程</a> 一步步搭建</p>
+</blockquote>
+<ol>
+<li>安装环境<a target="_blank" rel="noopener" href="https://nodejs.org/en/download">node.js</a>和<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">git</a>等</li>
+<li>安装<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a></li>
+<li>安装<a target="_blank" rel="noopener" href="https://butterfly.js.org/">butterfly</a></li>
+<li>用Github Pages部署
+  <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1zT411A7XL/" class="bilibili_box" id="BV1zT411A7XL"></a>
+
+  <script>
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1zT411A7XL')
+      fetch('https://api.320.ink/api/b?id=BV1zT411A7XL').then(res=>res.json()).then(data=>{
+        dom.innerHTML = `
+        <div class="bilibili_cover">
+          <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
+          <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="${data.pic + '&h=300'}" class="no-lazyload">
+          <span>06:41</span>
+        </div>
+        <div class="bilibili_info">
+          <div class="title">${data.title}</div>
+          <div class="desc">${data.desc}</div>
+          <div class="stat">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
+            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
+            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
+          </div>
+          <div class="owner">
+            <span class="bilibilitip">视频</span>
+            <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="${data.face + '&h=100'}" class="no-lazyload">
+            <span>${data.owner}</span>
+          </div>
+        </div>
+        `
+      })
+    }
+  </script>
+  
+<p align=right><pa> - 2023.7.22更新 - </pa></p></li>
+</ol>
+<hr>
+<h1 id="魔改butterfly源码"><a href="#魔改butterfly源码" class="headerlink" title="魔改butterfly源码"></a>魔改butterfly源码</h1><h2 id="首页index"><a href="#首页index" class="headerlink" title="首页index"></a>首页index</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><div class="note flat"><p>首先需要分析把握butterfly主题的文件结构：</p>
+<ul>
+<li>我们发现它的 <strong>文章页</strong> 及 <strong>首页</strong> 是一起构建的<code>themes\butterfly\layout\includes\layout.pug</code></li>
+<li>在<strong>layout.pug</strong>中引入了<code>themes\butterfly\layout\includes\header\index.pug</code>构建了头图<strong>top_img</strong></li>
+<li>然后又在<strong>该</strong> <strong>index.pug</strong>中构建了导航栏<code>themes\butterfly\layout\includes\header\nav.pug</code></li>
+</ul>
+</div>
+<p align=right><pa> - 2023.7.22更新 - </pa></p>
+
+<hr>
+<h3 id="导航栏nav魔改"><a href="#导航栏nav魔改" class="headerlink" title="导航栏nav魔改"></a>导航栏nav魔改</h3><blockquote>
+<p>怎么好看怎么来！🥰<br><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/%E5%AF%BC%E8%88%AA%E6%A0%8F1.png" alt="导航栏1"></p>
+</blockquote>
+<h4 id="导航栏居中"><a href="#导航栏居中" class="headerlink" title="导航栏居中"></a>导航栏居中</h4><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><p>参考了 <a target="_blank" rel="noopener" href="https://blog.leonus.cn/2022/hexoCenter.html">Leonus的教程</a>，包括导航栏子菜单的横向也改了，<br>子菜单的<y>横向居中</y>是肉眼微调的：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-id">#nav</span> <span class="hljs-selector-class">.menus_items</span> <span class="hljs-selector-class">.menus_item</span><span class="hljs-selector-pseudo">:hover</span> <span class="hljs-selector-class">.menus_item_child</span> &#123;<br>    <span class="hljs-attribute">display</span>: flex;<br>    <span class="hljs-attribute">right</span>: auto;<br>    <span class="hljs-attribute">left</span>: -<span class="hljs-number">108px</span> <span class="hljs-meta">!important</span>; <span class="hljs-comment">/*水平居中用，微调*/</span><br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">6px</span> <span class="hljs-number">4px</span>;<br>    <span class="hljs-attribute">box-sizing</span>: content-box;<br>    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">35px</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<div class="note info flat"><p><a target="_blank" rel="noopener" href="https://blog.leonus.cn/2022/custom.html">添加自定义css和js文件</a>的教程很多</p>
+</div></div></details>
+<p align=right><pa> - 2023.7.22更新 - </pa></p>
+
+<hr>
+<h4 id="导航栏的滚动自适应收展"><a href="#导航栏的滚动自适应收展" class="headerlink" title="导航栏的滚动自适应收展"></a>导航栏的滚动自适应收展</h4><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><blockquote>
+<p>主要是看到 <a target="_blank" rel="noopener" href="https://blog.naver.com/pikiv">别人的博客</a> 用起来很舒适，给自己也整一个</p>
+</blockquote>
+<div class="note info flat"><p>我们找到这个功能被写在了<code>themes\butterfly\source\js\main.js</code>，所以直接改这里面的源码</p>
+</div>
+我们找到这段代码，
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> scrollTask = btf.<span class="hljs-title function_">throttle</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-keyword">const</span> currentTop = <span class="hljs-variable language_">window</span>.<span class="hljs-property">scrollY</span> || <span class="hljs-variable language_">document</span>.<span class="hljs-property">documentElement</span>.<span class="hljs-property">scrollTop</span><br>  <span class="hljs-keyword">const</span> isDown = <span class="hljs-title function_">scrollDirection</span>(currentTop)<br>  <span class="hljs-keyword">if</span> (currentTop &gt; <span class="hljs-number">56</span>) &#123;<br>    <span class="hljs-keyword">if</span> (isDown) &#123;<br>      <span class="hljs-keyword">if</span> ($header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">contains</span>(<span class="hljs-string">&#x27;nav-visible&#x27;</span>)) $header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">remove</span>(<span class="hljs-string">&#x27;nav-visible&#x27;</span>)<br>      <span class="hljs-keyword">if</span> (isChatBtn &amp;&amp; isChatShow === <span class="hljs-literal">true</span>) &#123;<br>        <span class="hljs-variable language_">window</span>.<span class="hljs-property">chatBtn</span>.<span class="hljs-title function_">hide</span>()<br>        isChatShow = <span class="hljs-literal">false</span><br>      &#125;<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-keyword">if</span> (!$header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">contains</span>(<span class="hljs-string">&#x27;nav-visible&#x27;</span>)) $header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;nav-visible&#x27;</span>)<br>      <span class="hljs-keyword">if</span> (isChatBtn &amp;&amp; isChatShow === <span class="hljs-literal">false</span>) &#123;<br>        <span class="hljs-variable language_">window</span>.<span class="hljs-property">chatBtn</span>.<span class="hljs-title function_">show</span>()<br>        isChatShow = <span class="hljs-literal">true</span><br>      &#125;<br>    &#125;<br>    $header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;nav-fixed&#x27;</span>)<br>    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">window</span>.<span class="hljs-title function_">getComputedStyle</span>($rightside).<span class="hljs-title function_">getPropertyValue</span>(<span class="hljs-string">&#x27;opacity&#x27;</span>) === <span class="hljs-string">&#x27;0&#x27;</span>) &#123;<br>      $rightside.<span class="hljs-property">style</span>.<span class="hljs-property">cssText</span> = <span class="hljs-string">&#x27;opacity: 0.8; transform: translateX(-58px)&#x27;</span><br>    &#125;<br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-keyword">if</span> (currentTop === <span class="hljs-number">0</span>) &#123;<br>      $header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">remove</span>(<span class="hljs-string">&#x27;nav-fixed&#x27;</span>, <span class="hljs-string">&#x27;nav-visible&#x27;</span>)<br>    &#125;<br>    $rightside.<span class="hljs-property">style</span>.<span class="hljs-property">cssText</span> = <span class="hljs-string">&quot;opacity: &#x27;&#x27;; transform: &#x27;&#x27;&quot;</span><br>  &#125;<br><br>  isShowPercent &amp;&amp; <span class="hljs-title function_">rightsideScrollPercent</span>(currentTop)<br><br>  <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-property">scrollHeight</span> &lt;= innerHeight) &#123;<br>    $rightside.<span class="hljs-property">style</span>.<span class="hljs-property">cssText</span> = <span class="hljs-string">&#x27;opacity: 0.8; transform: translateX(-58px)&#x27;</span><br>  &#125;<br>&#125;, <span class="hljs-number">200</span>)<br></code></pre></td></tr></table></figure>
+<p>它实现的逻辑可以归纳为：</p>
+<div class="note no-icon flat"><ol>
+<li>获取当前页面滚动的距离( <y>currentTop</y> )</li>
+<li>根据滚动的方向判断( <y>isDown</y> )</li>
+<li>如果滚动距离大于 56 像素：<ul>
+<li>如果是向下滚动，并且导航栏具有类名 <y>nav-visible</y>，则移除该类名</li>
+<li>如果存在聊天按钮并且聊天按钮显示为 true，则隐藏聊天按钮</li>
+<li>如果是向上滚动，并且导航栏不具有类名 <y>nav-visible</y>，则添加该类名</li>
+<li>如果存在聊天按钮并且聊天按钮显示为 false，则显示聊天按钮</li>
+<li>给导航栏添加类名 <y>nav-fixed</y></li>
+<li>如果右侧按钮的透明度为 0，则设置透明度为 0.8，水平平移 -58 像素</li>
+</ul>
+</li>
+<li>如果滚动距离小于等于 56 像素：<ul>
+<li>如果滚动距离为 0<pa>（<em>即在页面顶部</em>）</pa>，则移除导航栏的类名 <y>nav-fixed</y> 和 <y>nav-visible</y></li>
+<li>重置右侧按钮的样式</li>
+</ul>
+</li>
+<li>如果启用了显示百分比的功能，则调用 rightsideScrollPercent 函数</li>
+<li>如果页面内容高度小于窗口高度，则设置右侧按钮的样式为透明度 0.8，水平平移 -58 像素</li>
+</ol>
+</div>
+看得出导航栏nav的效果实现跟两个因素有关<y>nav-visible</y>和<y>nav-fixed</y>；
+回想一下**butterfly原主题** 导航栏nav的效果是：
+|  向下滚动  |  向上滚动  |到达顶部|
+| :-----------: | :-----------: | :-----------: |
+| 收纳      | 展开       |  先展开再变透明  |
+| remove('<y>nav-visible</y>')   | add('<y>nav-visible</y>')        |remove('<y>nav-fixed</y>', '<y>nav-visible</y>')|
+
+<p>而我只想要页面改成：</p>
+<table>
+<thead>
+<tr>
+<th align="center">向下滚动</th>
+<th align="center">向上滚动</th>
+<th align="center">到达顶部</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">展开</td>
+<td align="center">展开</td>
+<td align="center">收纳</td>
+</tr>
+<tr>
+<td align="center">add(‘<y>nav-visible</y>‘)</td>
+<td align="center">add(‘<y>nav-visible</y>‘)</td>
+<td align="center">remove(‘<y>nav-visible</y>‘)</td>
+</tr>
+</tbody></table>
+<p>故我们的代码可以这么改：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> scrollTask = btf.<span class="hljs-title function_">throttle</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>      <span class="hljs-keyword">const</span> currentTop = <span class="hljs-variable language_">window</span>.<span class="hljs-property">scrollY</span> || <span class="hljs-variable language_">document</span>.<span class="hljs-property">documentElement</span>.<span class="hljs-property">scrollTop</span><br>      <span class="hljs-keyword">const</span> isDown = <span class="hljs-title function_">scrollDirection</span>(currentTop)<br>      <span class="hljs-keyword">if</span> ($header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">contains</span>(<span class="hljs-string">&#x27;nav-visible&#x27;</span>)) $header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">remove</span>(<span class="hljs-string">&#x27;nav-visible&#x27;</span>)<br>      $nav.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;show&#x27;</span>)<br>      <span class="hljs-keyword">if</span> (currentTop &gt; <span class="hljs-number">56</span>) &#123;<br>        <span class="hljs-keyword">if</span> (!$header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">contains</span>(<span class="hljs-string">&#x27;nav-visible&#x27;</span>)) $header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;nav-visible&#x27;</span>)<br>        <span class="hljs-keyword">if</span> (isDown) &#123;<br>          <span class="hljs-keyword">if</span> (isChatBtn &amp;&amp; isChatShow === <span class="hljs-literal">true</span>) &#123;<br>            <span class="hljs-variable language_">window</span>.<span class="hljs-property">chatBtn</span>.<span class="hljs-title function_">hide</span>()<br>            isChatShow = <span class="hljs-literal">false</span><br>          &#125;<br>        &#125; <br>        <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-comment">// if (!$header.classList.contains(&#x27;nav-visible&#x27;)) $header.classList.add(&#x27;nav-visible&#x27;)</span><br>          <span class="hljs-keyword">if</span> (isChatBtn &amp;&amp; isChatShow === <span class="hljs-literal">false</span>) &#123;<br>            <span class="hljs-variable language_">window</span>.<span class="hljs-property">chatBtn</span>.<span class="hljs-title function_">show</span>()<br>            isChatShow = <span class="hljs-literal">true</span><br>          &#125;<br>        &#125;<br>        $header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;nav-fixed&#x27;</span>)<br>        <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">window</span>.<span class="hljs-title function_">getComputedStyle</span>($rightside).<span class="hljs-title function_">getPropertyValue</span>(<span class="hljs-string">&#x27;opacity&#x27;</span>) === <span class="hljs-string">&#x27;0&#x27;</span>) &#123;<br>          $rightside.<span class="hljs-property">style</span>.<span class="hljs-property">cssText</span> = <span class="hljs-string">&#x27;opacity: 0.8; transform: translateX(-58px)&#x27;</span><br>        &#125;<br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-keyword">if</span> (currentTop === <span class="hljs-number">0</span>) &#123;<br>          $header.<span class="hljs-property">classList</span>.<span class="hljs-title function_">remove</span>(<span class="hljs-string">&#x27;nav-visible&#x27;</span>)<br>        &#125;<br>        $rightside.<span class="hljs-property">style</span>.<span class="hljs-property">cssText</span> = <span class="hljs-string">&quot;opacity: &#x27;&#x27;; transform: &#x27;&#x27;&quot;</span><br>      &#125;<br><br>      isShowPercent &amp;&amp; <span class="hljs-title function_">rightsideScrollPercent</span>(currentTop)<br><br>      <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-property">scrollHeight</span> &lt;= innerHeight) &#123;<br>        $rightside.<span class="hljs-property">style</span>.<span class="hljs-property">cssText</span> = <span class="hljs-string">&#x27;opacity: 0.8; transform: translateX(-58px)&#x27;</span><br>      &#125;<br>    &#125;, <span class="hljs-number">200</span>)<br></code></pre></td></tr></table></figure>
+<p>值得一提的是，上述代码中在<code>remove(&#39;nav-visible&#39;)</code>后我多加了一句<code>$nav.classList.add(&#39;show&#39;)</code>，这是因为每次页面刷新后，header会初始化成原主题的效果，<del>我找半天没找到写哪儿的</del>，干脆把nav初始化的逻辑放后面，这样就避免了这个问题，<pa><del>其实没有完全避免，nav只是变透明了而已，不会有人发现吧</del></pa><br>因此我们还需要多做一步改动，</p>
+<div class="note info flat"><p>这个功能依然是在<code>themes\butterfly\source\js\main.js</code>里的，所以继续改里面的源码</p>
+</div>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 初始化header</span><br><span class="hljs-keyword">const</span> <span class="hljs-title function_">initAdjust</span> = (<span class="hljs-params"></span>) =&gt; &#123;<br>  <span class="hljs-title function_">adjustMenu</span>(<span class="hljs-literal">true</span>)<br>  <span class="hljs-comment">// $nav.classList.add(&#x27;show&#x27;) // &lt;—— 注释掉</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>如果你想关掉butterfly主题的导航栏，想自己写一个新的，可以考虑直接注释掉<code>$nav.classList.add(&#39;show&#39;)</code></p>
+</blockquote>
+<p>你懂了吗？🤗<b>- The End -</b></p>
+</div></details>
+<p align=right><pa> - 2023.7.22更新 - </pa></p>
+
+<hr>
+<h4 id="移动端的导航栏"><a href="#移动端的导航栏" class="headerlink" title="移动端的导航栏"></a>移动端的导航栏</h4><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/%E5%AF%BC%E8%88%AA%E6%A0%8F2.png" alt="导航栏2"></p>
+<div class="note info flat"><p>这部分是在<code>themes\butterfly\layout\includes\sidebar.pug</code>里的</p>
+</div>
+
+<p>因为它的源码结构很标准，一眼看懂，我就不多说了，<br>有一点值得注意，如果你想跟我一样改掉那个“小剪刀”，需要修改<code>.deploy_git\css\index.css</code>里<b><y>hr</y></b>的<b><y>content</y></b>部分，修改成<b><y>icon</y></b>对应的<b><y>Unicode码</y></b>：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.search-dialog</span> hr<span class="hljs-selector-pseudo">:before</span> &#123;<br>    <span class="hljs-attribute">position</span>: absolute;<br>    <span class="hljs-attribute">top</span>: -<span class="hljs-number">7.5px</span>;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">5%</span>;<br>    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;<br>    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--hr-before-color);<br>    <span class="hljs-attribute">content</span>: <span class="hljs-string">&#x27;\f0c4&#x27;</span>;    <span class="hljs-comment">/*&lt;—— 就是这里*/</span><br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">15px</span>;<br>    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;<br>    -webkit-<span class="hljs-attribute">transition</span>: all <span class="hljs-number">1s</span> ease-in-out;<br>    -moz-<span class="hljs-attribute">transition</span>: all <span class="hljs-number">1s</span> ease-in-out;<br>    -o-<span class="hljs-attribute">transition</span>: all <span class="hljs-number">1s</span> ease-in-out;<br>    -ms-<span class="hljs-attribute">transition</span>: all <span class="hljs-number">1s</span> ease-in-out;<br>    <span class="hljs-attribute">transition</span>: all <span class="hljs-number">1s</span> ease-in-out;<br>&#125;<br></code></pre></td></tr></table></figure></div></details>
+<p align=right><pa> - 2023.7.22更新 - </pa></p>
+
+<hr>
+<h4 id="Algolia搜索配置（不用了）"><a href="#Algolia搜索配置（不用了）" class="headerlink" title="Algolia搜索配置（不用了）"></a>Algolia搜索配置（不用了）</h4><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><blockquote>
+<p>跟着<a target="_blank" rel="noopener" href="https://github.com/thom4parisot/hexo-algolia">Algolia官方文档</a>走一遍</p>
+</blockquote>
+<div class="note info flat"><p><strong>API Keys</strong>在<a target="_blank" rel="noopener" href="https://dashboard.algolia.com/account/api-keys/">设置</a>里</p>
+</div>
+
+<p>值得一提的是，我在配置好<y>_config.yml</y>后，执行<code>hexo algolia</code>报错: <code>Please set an HEXO_ALGOLIA_INDEXING_KEY environment variable to enable content indexing.</code><br>解决方法很简单，就自己添加一个环境变量，详见<a target="_blank" rel="noopener" href="https://werty.cn/2019/07/hexo/hexo%20algolia%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">猿宵的文章</a></p>
+<p>配置好后，稍微改一下样式：<br>这部分的文件在<code>themes\butterfly\layout\includes\third-party\search\algolia.pug</code>，但我只改一部分css和js；<br>比如修改了页码的颜色，</p>
+<div class="note info flat"><p>修改的文件是<code>themes\butterfly\source\css\_search\algolia.styl</code></p>
+</div>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-class">.ais-Pagination-item--selected</span><br>  <span class="hljs-selector-tag">a</span><br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#954e3e</span>//<span class="hljs-variable">$theme</span>-paginator-color<br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#eee</span><br>    <span class="hljs-attribute">cursor</span>: default<br></code></pre></td></tr></table></figure>
+再比如去掉了搜索结果会显示最下面的分隔线，
+<div class="note info flat"><p>修改的文件是<code>themes\butterfly\source\js\search\algolia.js</code></p>
+</div>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> stats = instantsearch.<span class="hljs-property">widgets</span>.<span class="hljs-title function_">stats</span>(&#123;<br>  <span class="hljs-attr">container</span>: <span class="hljs-string">&#x27;#algolia-info &gt; .algolia-stats&#x27;</span>,<br>  <span class="hljs-attr">templates</span>: &#123;<br>    <span class="hljs-attr">text</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) &#123;<br>      <span class="hljs-keyword">const</span> stats = <span class="hljs-variable constant_">GLOBAL_CONFIG</span>.<span class="hljs-property">algolia</span>.<span class="hljs-property">languages</span>.<span class="hljs-property">hits_stats</span><br>        .<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/\$\&#123;hits&#125;/</span>, data.<span class="hljs-property">nbHits</span>)<br>        .<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/\$\&#123;time&#125;/</span>, data.<span class="hljs-property">processingTimeMS</span>)<br>      <span class="hljs-keyword">return</span> (<br>        <span class="hljs-comment">// `&lt;hr&gt;$&#123;stats&#125;`</span><br>        <span class="hljs-string">`<span class="hljs-subst">$&#123;stats&#125;</span>`</span><br>      )<br>    &#125;<br>  &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+<p>再比如修改了中间分隔线hr的配色，</p>
+<div class="note info flat"><p>修改的文件是<code>themes\butterfly\source\css\_search\index.styl</code></p>
+</div>
+
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs styl">hr<br>  <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span> auto<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#954e3e</span>; <span class="hljs-comment">//&lt;—— 添加了这句覆盖原有颜色</span><br>  <span class="hljs-keyword">@extend</span> .custom-hr<br></code></pre></td></tr></table></figure>
+<p>至于分隔线上面的hr:before元素，我直接在以前新建的css文件中添了句话：</p>
+<div class="note info flat"><p>修改的文件是<code>themes\butterfly\source\css\nav.css</code></p>
+</div>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css">  <span class="hljs-selector-class">.search-dialog</span> hr<span class="hljs-selector-pseudo">:before</span> &#123;<br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#954e3e</span>;<br>&#125;<br></code></pre></td></tr></table></figure></div></details>
+<p align=right><pa> - 2023.7.30更新 - </pa></p>
+
+<hr>
+<h4 id="本地搜索配置"><a href="#本地搜索配置" class="headerlink" title="本地搜索配置"></a>本地搜索配置</h4><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><div class="note info flat"><p>在butterfly的.yml里配置一下即可</p>
+</div>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># Local search</span><br><span class="hljs-attr">local_search:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-comment"># Preload the search data when the page loads.</span><br>  <span class="hljs-attr">preload:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-comment"># Show top n results per article, show all results by setting to -1</span><br>  <span class="hljs-attr">top_n_per_article:</span> <span class="hljs-number">6</span><br>  <span class="hljs-comment"># Unescape html strings to the readable one.</span><br>  <span class="hljs-attr">unescape:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">CDN:</span><br></code></pre></td></tr></table></figure>
+
+<p>然后把样式改成跟Algolia一样的，有些已经在 <a href="#algolia%E6%90%9C%E7%B4%A2%E9%85%8D%E7%BD%AE%E4%B8%8D%E7%94%A8%E4%BA%86">配置Algolia</a>时改过了，以下是其中没涉及的：</p>
+<div class="note info flat"><p>修改的文件是<code>themes\butterfly\source\js\search\local-search.js</code></p>
+</div>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">inputEventFunction</span> = (<span class="hljs-params"></span>) =&gt; &#123;<br>    <span class="hljs-keyword">if</span> (!localSearch.<span class="hljs-property">isfetched</span>) <span class="hljs-keyword">return</span><br>    <span class="hljs-keyword">const</span> searchText = input.<span class="hljs-property">value</span>.<span class="hljs-title function_">trim</span>().<span class="hljs-title function_">toLowerCase</span>()<br>    <span class="hljs-keyword">if</span> (searchText !== <span class="hljs-string">&#x27;&#x27;</span>) $loadingStatus.<span class="hljs-property">innerHTML</span> = <span class="hljs-string">&#x27;&lt;i class=&quot;fas fa-spinner fa-pulse&quot;&gt;&lt;/i&gt;&#x27;</span><br>    <span class="hljs-keyword">const</span> keywords = searchText.<span class="hljs-title function_">split</span>(<span class="hljs-regexp">/[-\s]+/</span>)<br>    <span class="hljs-keyword">const</span> container = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;local-search-results&#x27;</span>)<br>    <span class="hljs-keyword">let</span> resultItems = []<br>    <span class="hljs-keyword">if</span> (searchText.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>) &#123;<br>    <span class="hljs-comment">// Perform local searching</span><br>      resultItems = localSearch.<span class="hljs-title function_">getResultItems</span>(keywords)<br>    &#125;<br>    <span class="hljs-keyword">if</span> (keywords.<span class="hljs-property">length</span> === <span class="hljs-number">1</span> &amp;&amp; keywords[<span class="hljs-number">0</span>] === <span class="hljs-string">&#x27;&#x27;</span>) &#123;<br>      container.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;no-result&#x27;</span>)<br>      container.<span class="hljs-property">textContent</span> = <span class="hljs-string">&#x27;&#x27;</span><br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (resultItems.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) &#123;<br>      container.<span class="hljs-property">textContent</span> = <span class="hljs-string">&#x27;&#x27;</span><br>      statsItem.<span class="hljs-property">innerHTML</span> = <span class="hljs-string">`&lt;div class=&quot;search-result-stats&quot;&gt;<span class="hljs-subst">$&#123;languages.hits_empty.replace(/\$\&#123;query&#125;/, searchText)&#125;</span>&lt;/div&gt;`</span><br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      resultItems.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">left, right</span>) =&gt;</span> &#123;<br>        <span class="hljs-keyword">if</span> (left.<span class="hljs-property">includedCount</span> !== right.<span class="hljs-property">includedCount</span>) &#123;<br>          <span class="hljs-keyword">return</span> right.<span class="hljs-property">includedCount</span> - left.<span class="hljs-property">includedCount</span><br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (left.<span class="hljs-property">hitCount</span> !== right.<span class="hljs-property">hitCount</span>) &#123;<br>          <span class="hljs-keyword">return</span> right.<span class="hljs-property">hitCount</span> - left.<span class="hljs-property">hitCount</span><br>        &#125;<br>        <span class="hljs-keyword">return</span> right.<span class="hljs-property">id</span> - left.<span class="hljs-property">id</span><br>      &#125;)<br><br>      <span class="hljs-keyword">const</span> stats = languages.<span class="hljs-property">hits_stats</span>.<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/\$\&#123;hits&#125;/</span>, resultItems.<span class="hljs-property">length</span>)<br><br>      container.<span class="hljs-property">classList</span>.<span class="hljs-title function_">remove</span>(<span class="hljs-string">&#x27;no-result&#x27;</span>)<br>      container.<span class="hljs-property">innerHTML</span> = <span class="hljs-string">`&lt;div class=&quot;search-result-list&quot;&gt;<span class="hljs-subst">$&#123;resultItems.map(result =&gt; result.item).join(<span class="hljs-string">&#x27;&#x27;</span>)&#125;</span>&lt;/div&gt;`</span><br>      <span class="hljs-comment">// statsItem.innerHTML = `&lt;hr&gt;&lt;div class=&quot;search-result-stats&quot;&gt;$&#123;stats&#125;&lt;/div&gt;`</span><br>      statsItem.<span class="hljs-property">innerHTML</span> = <span class="hljs-string">`&lt;div class=&quot;search-result-stats&quot;&gt;<span class="hljs-subst">$&#123;stats&#125;</span>&lt;/div&gt;`</span> <span class="hljs-comment">// &lt;—— 改了这句</span><br>      <span class="hljs-variable language_">window</span>.<span class="hljs-property">pjax</span> &amp;&amp; <span class="hljs-variable language_">window</span>.<span class="hljs-property">pjax</span>.<span class="hljs-title function_">refresh</span>(container)<br>    &#125;<br><br>    $loadingStatus.<span class="hljs-property">textContent</span> = <span class="hljs-string">&#x27;&#x27;</span><br>  &#125;<br></code></pre></td></tr></table></figure>
+以及把标题从“搜索”改成了“站内搜索”：
+<div class="note info flat"><p>修改的文件是<code>themes\butterfly\layout\includes\third-party\search\local-search.pug</code></p>
+</div>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs diff">#local-search<br>  .search-dialog<br>    nav.search-nav<br><span class="hljs-addition">+     span.search-dialog-title= _p(&#x27;站内搜索&#x27;)</span><br><span class="hljs-deletion">-     span.search-dialog-title= _p(&#x27;search.title&#x27;)</span><br>      span#loading-status<br></code></pre></td></tr></table></figure></div></details>
+<p align=right><pa> - 2023.8.1更新 - </pa></p>
+
+<hr>
+<h3 id="头图top-img魔改"><a href="#头图top-img魔改" class="headerlink" title="头图top_img魔改"></a>头图top_img魔改</h3><blockquote>
+<p>鬼知道这个效果花了我多少心思😭</p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/%E5%87%86%E5%A4%87%E6%96%87%E4%BB%B6.png" alt="封面图"></p>
+<h4 id="背景图的处理"><a href="#背景图的处理" class="headerlink" title="背景图的处理"></a>背景图的处理</h4><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><p>我主要是修改了一点css样式，比如：</p>
+<div class="note info flat"><p>头图的样式在<code>themes\butterfly\source\css\_layout\head.styl</code></p>
+</div>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-id">#page-header</span><br>    <span class="hljs-attribute">position</span>: relative<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span><br>    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$sidebar</span>-background  //<span class="hljs-variable">$light</span>-blue<br>    <span class="hljs-attribute">background-position</span>: center <span class="hljs-number">0</span> //center center<br>    <span class="hljs-attribute">background-size</span>: cover<br>    <span class="hljs-attribute">background-repeat</span>: no-repeat<br>    <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">5s</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs styl">&amp;<span class="hljs-selector-class">.full_page</span><br>  <span class="hljs-attribute">height</span>: <span class="hljs-variable">$index_top_img_height</span><br>  <span class="hljs-comment">// background-attachment: fixed</span><br></code></pre></td></tr></table></figure>
+上面提到的<b><y>$index_top_img_height</y></b>是`themes\butterfly\source\css\var.styl`里的，我修改了它的值为**43vw**
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-variable">$index_top_img_height</span> = <span class="hljs-built_in">hexo-config</span>(<span class="hljs-string">&#x27;index_top_img_height&#x27;</span>) ? <span class="hljs-built_in">convert</span>(<span class="hljs-built_in">hexo-config</span>(<span class="hljs-string">&#x27;index_top_img_height&#x27;</span>)) : <span class="hljs-number">43vw</span> <span class="hljs-comment">//100vh</span><br></code></pre></td></tr></table></figure>
+除此之外，我还删掉了标题、副标题等的显示：
+<div class="note info flat"><p>修改的文件是<code>themes\butterfly\layout\includes\header\index.pug</code>，<a href="#%E5%89%8D%E8%A8%80">前言</a>有提及</p>
+</div>
+
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs diff"><span class="hljs-deletion">- 以上省略</span><br>  if is_post()<br>        include ./post-info.pug<br><span class="hljs-deletion">-       #site-info</span><br><span class="hljs-deletion">-         h1#site-title=site_title</span><br><span class="hljs-deletion">-         if theme.subtitle.enable</span><br><span class="hljs-deletion">-           - var loadSubJs = true</span><br><span class="hljs-deletion">-           #site-subtitle</span><br><span class="hljs-deletion">-             span#subtitle</span><br><span class="hljs-deletion">-       if(theme.social)</span><br><span class="hljs-deletion">-         #site_social_icons</span><br><span class="hljs-deletion">-           !=partial(&#x27;includes/header/social&#x27;, &#123;&#125;, &#123;cache: true&#125;)</span><br><span class="hljs-deletion">-       #scroll-down</span><br><span class="hljs-deletion">-         i.fa-solid.fa-ghost.scroll-down-effects</span><br><span class="hljs-deletion">-       i.fas.fa-angle-down.scroll-down-effects</span><br>  else<br>      #page-site-info<br>        h1#site-title=site_title<br><br></code></pre></td></tr></table></figure></div></details>
+<p align=right><pa> - 2023.8.1更新 - </pa></p>
+
+<hr>
+<h4 id="四个选项的处理"><a href="#四个选项的处理" class="headerlink" title="四个选项的处理"></a>四个选项的处理</h4><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><blockquote>
+<p>这个鼠标移到图片上自动变成另一张图片的效果，是我在把玩<strong>Adobe Dreamweaver</strong>的时候发现的</p>
+</blockquote>
+<p>新建一个<b><y>pug文件</y></b>放js函数，存放这个效果，建议<code>themes\butterfly\layout\includes\head\tophead.pug</code></p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs diff"><span class="hljs-addition">+   script(type=&#x27;text/javascript&#x27;).</span><br><span class="hljs-addition">+       function hover(element, src) &#123;</span><br><span class="hljs-addition">+           element.setAttribute(&#x27;src&#x27;, src);</span><br><span class="hljs-addition">+           element.parentElement.setAttribute(&#x27;href&#x27;, link);</span><br><span class="hljs-addition">+       &#125;</span><br></code></pre></td></tr></table></figure>
+<p>再新建一个<b><y>pug文件</y></b>让我的图片使用这个效果，建议<code>themes\butterfly\layout\includes\header\top.pug</code></p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs diff"><span class="hljs-addition">+   ul.option_1</span><br><span class="hljs-addition">+       li</span><br><span class="hljs-addition">+           #resume</span><br><span class="hljs-addition">+           a(href=&quot;/link/&quot;)</span><br><span class="hljs-addition">+               img(src=&quot;/img/简介0.png&quot;, alt=&quot;resume&quot;,style=&quot;width: 9vw&quot;, onmouseover=&quot;hover(this, &#x27;/img/简介1.png&#x27;, &#x27;/link/&#x27;)&quot;, onmouseout=&quot;hover(this, &#x27;/img/简介0.png&#x27;)&quot;)</span><br><span class="hljs-addition">+       li</span><br><span class="hljs-addition">+           #works</span><br><span class="hljs-addition">+           a(href=&quot;/link/&quot;)</span><br><span class="hljs-addition">+               img(src=&quot;/img/作品0.png&quot;, alt=&quot;works&quot;, style=&quot;width: 6vw&quot;, onmouseover=&quot;hover(this, &#x27;/img/作品1.png&#x27;, &#x27;/link/&#x27;)&quot;, onmouseout=&quot;hover(this, &#x27;/img/作品0.png&#x27;)&quot;)</span><br><span class="hljs-addition">+   ul.option_2</span><br><span class="hljs-addition">+       li</span><br><span class="hljs-addition">+           #articles</span><br><span class="hljs-addition">+           a(href=&quot;/link/&quot;)</span><br><span class="hljs-addition">+               img(src=&quot;/img/文章0.png&quot;, alt=&quot;articles&quot;, style=&quot;width: 6vw&quot;, onmouseover=&quot;hover(this, &#x27;/img/文章1.png&#x27;, &#x27;/link/&#x27;)&quot;, onmouseout=&quot;hover(this, &#x27;/img/文章0.png&#x27;)&quot;)</span><br><span class="hljs-addition">+       li</span><br><span class="hljs-addition">+           #contact</span><br><span class="hljs-addition">+           a(href=&quot;/link/&quot;)</span><br><span class="hljs-addition">+               img(src=&quot;/img/联系0.png&quot;, alt=&quot;contact&quot;, style=&quot;width: 9vw&quot;, onmouseover=&quot;hover(this, &#x27;/img/联系1.png&#x27;, &#x27;/link/&#x27;)&quot;, onmouseout=&quot;hover(this, &#x27;/img/联系0.png&#x27;)&quot;)</span><br></code></pre></td></tr></table></figure>
+<p>再新建一个<b><y>css文件</y></b>来规范4张图片的排版，建议<code>themes\butterfly\source\css\top.css</code>，很多参数都需要微调，</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.option_1</span>&#123;<br>    -webkit-<span class="hljs-attribute">box-sizing</span>: content-box;<br>    -moz-<span class="hljs-attribute">box-sizing</span>: content-box;<br>    <span class="hljs-attribute">box-sizing</span>: content-box;<br>    <span class="hljs-attribute">width</span>: auto;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">17.5vw</span>;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0px</span>;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">0%</span>;<br>    <span class="hljs-attribute">right</span>: <span class="hljs-number">0%</span>;<br>    <span class="hljs-attribute">position</span>: absolute;<br>    <span class="hljs-attribute">text-align</span>: center;<br>    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0px</span>;<br>    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0px</span>;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">8vw</span>;<br>    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-selector-id">#resume</span>&#123;<br>    <span class="hljs-attribute">position</span>: relative;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">21vw</span>;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">2vw</span>;<br>    <span class="hljs-attribute">width</span>: fit-content;<br>&#125;<br><br><span class="hljs-selector-id">#works</span>&#123;<br>    <span class="hljs-attribute">position</span>: relative;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">73vw</span>;<br>    <span class="hljs-attribute">top</span>: -<span class="hljs-number">4vw</span>;<br>    <span class="hljs-attribute">width</span>: fit-content;<br>&#125;<br><br><span class="hljs-selector-class">.option_2</span>&#123;<br>    -webkit-<span class="hljs-attribute">box-sizing</span>: content-box;<br>    -moz-<span class="hljs-attribute">box-sizing</span>: content-box;<br>    <span class="hljs-attribute">box-sizing</span>: content-box;<br>    <span class="hljs-attribute">width</span>: auto;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">17.5vw</span>;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0px</span>;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">0%</span>;<br>    <span class="hljs-attribute">right</span>: <span class="hljs-number">0%</span>;<br>    <span class="hljs-attribute">position</span>: absolute;<br>    <span class="hljs-attribute">text-align</span>: center;<br>    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0px</span>;<br>    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0px</span>;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">25.5vw</span>;<br>    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-selector-id">#articles</span>&#123;<br>    <span class="hljs-attribute">position</span>: relative;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">27vw</span>;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">2vw</span>;<br>    <span class="hljs-attribute">width</span>: fit-content;<br>&#125;<br><br><span class="hljs-selector-id">#contact</span>&#123;<br>    <span class="hljs-attribute">position</span>: relative;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">62vw</span>;<br>    <span class="hljs-attribute">top</span>: -<span class="hljs-number">5.9vw</span>;<br>    <span class="hljs-attribute">width</span>: fit-content;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>该有的文件都准备好后，之前有分析过<a href="#%E5%89%8D%E8%A8%80">文件结构</a>，头图是在<code>themes\butterfly\layout\includes\header\index.pug</code>中被构建的，所以我们也修改源码，让新建的<strong>top.pug</strong>在这里被引用：</p>
+<div class="note info flat"><p>修改的文件是<code>themes\butterfly\layout\includes\header\index.pug</code>，<a href="#%E5%89%8D%E8%A8%80">前言</a>有提及</p>
+</div>
+
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs diff"><span class="hljs-deletion">- 以上省略</span><br>else if top_img !== false<br>    if is_post()<br>      include ./post-info.pug<br>    else if is_home() <br><span class="hljs-addition">+     include ./top.pug //- &lt;—— 添加这一行</span><br>      #site-info<br>        h1#site-title=site_title<br>        if theme.subtitle.enable<br><span class="hljs-deletion">- 以下省略</span><br></code></pre></td></tr></table></figure>
+<p>除此之外，因为我另外把函数放到了<strong>tophead.pug</strong>中，有必要单独在<b>&lt;head&gt;</b>块中引用一下，</p>
+<div class="note info flat"><p>修改的文件是<code>themes\butterfly\layout\includes\head.pug</code>，添在末尾即可</p>
+</div>
+
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs diff"><span class="hljs-deletion">- 以上省略</span><br>  //- global config<br>  !=partial(&#x27;includes/head/config&#x27;, &#123;&#125;, &#123;cache: true&#125;)<br><br>  include ./head/config_site.pug<br>  include ./head/noscript.pug<br><br>  !=fragment_cache(&#x27;injectHeadJs&#x27;, function()&#123;return inject_head_js()&#125;)<br><br>  !=fragment_cache(&#x27;injectHead&#x27;, function()&#123;return injectHtml(theme.inject.head)&#125;)<br><br><span class="hljs-addition">+ //- top头图</span><br><span class="hljs-addition">+ include ./head/tophead.pug //- &lt;—— 添加这一行</span><br></code></pre></td></tr></table></figure>
+<p>这样就成功了！好耶😊 <b>- The End -</b></p>
+</div></details>
+<p align=right><pa> - 2023.7.22更新 - </pa></p>
+
+<hr>
+<h2 id="文章单页article"><a href="#文章单页article" class="headerlink" title="文章单页article"></a>文章单页article</h2><h3 id="文章链接abbrlink设置"><a href="#文章链接abbrlink设置" class="headerlink" title="文章链接abbrlink设置"></a>文章链接abbrlink设置</h3><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><div class="note info flat"><p>跟着<a target="_blank" rel="noopener" href="https://chuchendjs.github.io/posts/BY-MOchange/#%E5%9C%B0%E5%9D%80%E6%A0%8F%E7%BE%8E%E8%A7%82">初辰の揽月</a>的教程走一遍</p>
+</div>
+之前没弄对，重新又弄了一遍，这下文章链接就简洁多了</div></details>
+<p align=right><pa> - 2023.7.31更新 - </pa></p>
+
+<hr>
+<h3 id="头图标题小改"><a href="#头图标题小改" class="headerlink" title="头图标题小改"></a>头图标题小改</h3><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><div class="note info flat"><p>修改的文件是<code>themes\butterfly\source\css\_layout\head.styl</code></p>
+</div>
+给原主题的标题和meta元素添加阴影
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-id">#post-info</span><br>  <span class="hljs-selector-class">.post-title</span><br>    <span class="hljs-keyword">@extend</span> .limit-more-line<br>    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">8px</span><br>    <span class="hljs-attribute">color</span>: var(--white)<br>    <span class="hljs-attribute">font-weight</span>: normal<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2.5em</span><br>    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span><br>    <span class="hljs-attribute">-webkit-line-clamp</span>: <span class="hljs-number">3</span><br>    <span class="hljs-attribute">text-shadow</span>: <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">11px</span> black; // &lt;--添加这行<br><br>  <span class="hljs-selector-id">#post-meta</span><br>    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--light-grey)<br>    font-size: <span class="hljs-number">95%</span><br>    text-shadow: <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">11px</span> black; // &lt;--添加这行<br></code></pre></td></tr></table></figure></div></details>
+<p align=right><pa> - 2023.7.29更新 - </pa></p>
+
+<hr>
+<h3 id="内容中的高亮代码块"><a href="#内容中的高亮代码块" class="headerlink" title="内容中的高亮代码块"></a>内容中的高亮代码块</h3><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><div class="note info flat"><p>修改的文件是<code>themes\butterfly\source\css\_highlight\highlight.styl</code></p>
+</div>
+之前觉得太浅了，这次改了个更深的
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-tag">code</span><br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2px</span> <span class="hljs-number">4px</span><br>  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$code</span>-background<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#bd8748</span> //<span class="hljs-variable">$code</span>-foreground<br></code></pre></td></tr></table></figure></div></details>
+<p align=right><pa> - 2023.7.29更新 - </pa></p>
+
+<hr>
+<h3 id="外挂标签改了颜色跟icon"><a href="#外挂标签改了颜色跟icon" class="headerlink" title="外挂标签改了颜色跟icon"></a>外挂标签改了颜色跟icon</h3><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><div class="note info flat"><p>修改的文件是<code>themes\butterfly\source\css\var.styl</code></p>
+</div>
+
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-comment">// Info</span><br><span class="hljs-variable">$note</span>-info-<span class="hljs-attribute">border</span> = <span class="hljs-number">#b19ca3</span><br><span class="hljs-variable">$note</span>-info-bg = <span class="hljs-built_in">lighten</span>(<span class="hljs-built_in">spin</span>(<span class="hljs-variable">$note</span>-info-<span class="hljs-attribute">border</span>, -<span class="hljs-number">10</span>), <span class="hljs-number">91%</span> + <span class="hljs-variable">$lbg</span>)<br><span class="hljs-variable">$note</span>-info-text = <span class="hljs-variable">$note</span>-info-<span class="hljs-attribute">border</span><br><span class="hljs-variable">$note</span>-info-<span class="hljs-attribute">icon</span> = <span class="hljs-string">&#x27;\f06c&#x27;</span><br><span class="hljs-variable">$note</span>-modern-info-<span class="hljs-attribute">border</span> = <span class="hljs-number">#e1e1e1</span><br><span class="hljs-variable">$note</span>-modern-info-bg = <span class="hljs-built_in">lighten</span>(<span class="hljs-built_in">spin</span>(<span class="hljs-variable">$note</span>-modern-info-<span class="hljs-attribute">border</span>, <span class="hljs-number">10</span>), <span class="hljs-number">50%</span> + (<span class="hljs-variable">$lbg</span> * <span class="hljs-number">4</span>))<br><span class="hljs-variable">$note</span>-modern-info-text = <span class="hljs-number">#8f7f84</span><br><span class="hljs-variable">$note</span>-modern-info-hover = <span class="hljs-built_in">darken</span>(<span class="hljs-built_in">spin</span>(<span class="hljs-variable">$note</span>-modern-info-text, -<span class="hljs-number">10</span>), <span class="hljs-number">32%</span>)<br></code></pre></td></tr></table></figure></div></details>
+<p align=right><pa> - 2023.7.31更新 - </pa></p>
+
+<hr>
+<h3 id="markdown的标题样式小改"><a href="#markdown的标题样式小改" class="headerlink" title="markdown的标题样式小改"></a>markdown的标题样式小改</h3><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><div class="note info flat"><p>新增了css，修改的文件是<code>themes\butterfly\source\css\markdown.css</code></p>
+</div>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 文章页H2-H4图标 显示H2~H4 */</span><br><span class="hljs-selector-id">#article-container</span><span class="hljs-selector-class">.post-content</span><br>    <span class="hljs-selector-tag">h2</span><span class="hljs-selector-pseudo">::before</span> &#123;<br>        <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;\f6e2\00a0&quot;</span>;<br>        <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Font Awesome 5 Free&quot;</span>;<br>        <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">900</span>;<br>    &#125;<br><br>    <span class="hljs-selector-tag">h3</span><span class="hljs-selector-pseudo">::before</span> &#123;<br>        <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;\f548\00a0&quot;</span>;<br>        <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Font Awesome 5 Free&quot;</span>;<br>        <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">900</span>;<br>    &#125;<br><br>    <span class="hljs-selector-tag">h4</span><span class="hljs-selector-pseudo">::before</span> &#123;<br>        <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;\f041\00a0&quot;</span>;<br>        <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Font Awesome 5 Free&quot;</span>;<br>        <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">900</span>;<br>    &#125;<br><br></code></pre></td></tr></table></figure></div></details>
+<p align=right><pa> - 2023.7.31更新 - </pa></p>
+
+<hr>
+<h3 id="文章文本size稍微调大了一点"><a href="#文章文本size稍微调大了一点" class="headerlink" title="文章文本size稍微调大了一点"></a>文章文本size稍微调大了一点</h3><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><div class="note info flat"><p>修改的文件是<code>themes\butterfly\source\css\markdown.css</code></p>
+</div>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 文章文字大小 */</span><br><span class="hljs-selector-class">.post</span> <span class="hljs-selector-id">#content-inner</span> &#123;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.1em</span>;<br>&#125;<br></code></pre></td></tr></table></figure></div></details>
+<p align=right><pa> - 2023.7.31更新 - </pa></p>
+
+<hr>
+<h3 id="文章目录过长调整"><a href="#文章目录过长调整" class="headerlink" title="文章目录过长调整"></a>文章目录过长调整</h3><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><div class="note info flat"><p>修改的文件是<code>themes\butterfly\source\css\_layout\aside.styl</code></p>
+</div>
+没想到合适的修改方法，还是丑，姑且先这样吧😔
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-class">.card-widget</span><br>  <span class="hljs-keyword">@extend</span> <span class="hljs-selector-class">.cardHover</span><br>  <span class="hljs-attribute">position</span>: relative<br>  <span class="hljs-attribute">overflow</span>: hidden<br>  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">20px</span><br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span> <span class="hljs-number">24px</span> <span class="hljs-number">20px</span> <span class="hljs-number">24px</span> //<span class="hljs-number">20px</span> <span class="hljs-number">24px</span><br></code></pre></td></tr></table></figure></div></details>
+<p align=right><pa> - 2023.7.31更新 - </pa></p>
+
+<hr>
+<h2 id="其他魔改"><a href="#其他魔改" class="headerlink" title="其他魔改"></a>其他魔改</h2><h3 id="保留文章页侧边栏的同时，取消首页的侧边栏"><a href="#保留文章页侧边栏的同时，取消首页的侧边栏" class="headerlink" title="保留文章页侧边栏的同时，取消首页的侧边栏"></a>保留文章页侧边栏的同时，取消首页的侧边栏</h3><details class="toggle" ><summary class="toggle-button" style="">点击查看内容</summary><div class="toggle-content"><p>我们发现侧边栏aside-content的构建是在<code>themes\butterfly\layout\includes\layout.pug</code>顶部的，<br><br>根据分析得知</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs diff"><span class="hljs-deletion">- page.aside = is_archive() ? theme.aside.display.archive: is_category() ? theme.aside.display.category : is_tag() ? theme.aside.display.tag : page.aside </span><br></code></pre></td></tr></table></figure>
+<p>这行代码的是<b><y>用于根据当前页面的类型来决定是否显示侧边栏</y></b>，<br></p>
+<p>比如当前页面若是归档页面<b>is_archive()</b>，则显示归档侧边栏<b>theme.aside.display.archive</b>；如果当前页面是分类页面<b>is_category()</b>，则显示分类侧边栏<b>theme.aside.display.category</b>；<br></p>
+<p>依照这个逻辑，想到正好归档页侧边栏显示的是<code>空白</code>，于是将同样的逻辑用在首页上，让首页用归档页的侧边栏，即可达到<y><b>首页不显示侧边栏的效果</b></y>修改后的代码如下：</p>
+<div class="note info flat"><p>修改的文件是<code>themes\butterfly\layout\includes\layout.pug</code></p>
+</div>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs diff"><span class="hljs-deletion">- page.aside = is_archive() ? theme.aside.display.archive: is_home() ? theme.aside.display.archive: is_category() ? theme.aside.display.category : is_tag() ? theme.aside.display.tag : page.aside //我不想home页有aside-content，正好archive页面没有aside-content，所以..</span><br></code></pre></td></tr></table></figure>
+
+<p>文章页因为我们根本没动，所以保留下来了。 <b>- The End -</b></p>
+</div></details>
+<p align=right><pa> - 2023.7.22更新 - </pa></p>
+
+<hr>
+<h1 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h1><div class="note [default] flat"><ul>
+<li>导航栏还没搞完呢<ul>
+<li>顶部导航栏收进去了你就不管了？</li>
+<li>移动端导航栏的再设计<ul>
+<li>加个头像？加个bilibili&#x2F;github&#x2F;twitter的链接？也许可以加个微信的付款码？</li>
+<li>感觉下面太空了</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>文章页面的顶部再设计<ul>
+<li>感觉放图片有点丑，要不把图片去了吧</li>
+<li>图片跟正文的分界线要加个波浪线动画吗？</li>
+</ul>
+</li>
+<li>简介resume页面设计<ul>
+<li>参考1999的UI？</li>
+<li>三个行业画三张人物图？</li>
+<li>这个<a target="_blank" rel="noopener" href="http://www.htmleaf.com/Demo/201904185615.html">风扇小组件</a>有意思</li>
+</ul>
+</li>
+<li>文章articles主页面设计</li>
+<li>联系contact页面设计</li>
+<li>作品works页面设计<ul>
+<li>插画页面</li>
+<li>设计页面<ul>
+<li>直接把视频全屏放上面？</li>
+</ul>
+</li>
+<li>开发页面</li>
+</ul>
+</li>
+<li>404页面要不要设计一下？</li>
+<li>这个<a target="_blank" rel="noopener" href="http://www.htmleaf.com/Demo/201909045783.html">加载动画</a>我挺喜欢的，可以利用设计一下</li>
+<li>首页下面的文章显示bar想改改，改成直接看全内容的，最好多点图片的那种</li>
+<li><del><pa>给右下按钮栏，加个直达bottom按钮</pa></del></li>
+<li><del><pa>代码块也重新设计</pa></del><ul>
+<li><del><pa>不知为啥pug代码类型识别不了</pa></del><y><pa> 用diff替代，大家都这么干</pa></y></li>
+<li><del><pa>配色想自定义一下</pa></del></li>
+<li><del><pa><code>这个引用</code>的颜色有点淡了，改改？</pa></del></li>
+</ul>
+</li>
+<li>bilibili视频引用的外挂标签需要自建一个api</li>
+<li>首页追番列表页面得搞吧，用bangumi的api<ul>
+<li>想重新画一下这个部分，画个q版二次元人物</li>
+</ul>
+</li>
+<li>首页还有个打赏，搞个付款码吧</li>
+<li>文章toc锚点往下跳转会被导航栏挡住，往上没问题</li>
+<li>文章toc展开后太长，超过了浏览器屏幕范围</li>
+<li><del><pa>搜索功能好像用不了？？？</pa></del><y><pa> 本来想用<b><a target="_blank" rel="noopener" href="https://github.com/LouisBarranqueiro/hexo-algoliasearch">hexo-algoliasearch</a></b>的，但似乎某篇文章字数太多被algolia限制用不了，此外，algolia配置有点隐私信息，需要把蹭的github项目private化，但是private化了就没法蹭Pages了，想想还是算了吧</pa></y></li>
+<li>感觉可以给超链接搞个<a target="_blank" rel="noopener" href="http://www.htmleaf.com/Demo/201811295435.html">这动画</a></li>
+<li><pa><del>研究一下vercel？</del>只能说没什么卵用，白嫖的域名国内还打不开 <a target="_blank" rel="noopener" href="https://xie-tiao.vercel.app/">https://xie-tiao.vercel.app/</a></pa></li>
+<li>要不然用本地主机做网站服务器？</li>
+</ul>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://xie-tiao.github.io">协调人</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xie-tiao.github.io/posts/4041827687/">https://xie-tiao.github.io/posts/4041827687/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xie-tiao.github.io" target="_blank">XT</a>！</span></div></div><div class="tag_share"><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/327765731/" title="【随笔/转载】命名规范（附勘误）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./pic/covers/20230801144929.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【随笔/转载】命名规范（附勘误）</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B9%ADGithub%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2Hexo"><span class="toc-number">1.</span> <span class="toc-text">蹭Github服务器部署Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AD%94%E6%94%B9butterfly%E6%BA%90%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">魔改butterfly源码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5index"><span class="toc-number">2.1.</span> <span class="toc-text">首页index</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">2.1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA%E6%A0%8Fnav%E9%AD%94%E6%94%B9"><span class="toc-number">2.1.2.</span> <span class="toc-text">导航栏nav魔改</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%B1%85%E4%B8%AD"><span class="toc-number">2.1.2.1.</span> <span class="toc-text">导航栏居中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA%E6%A0%8F%E7%9A%84%E6%BB%9A%E5%8A%A8%E8%87%AA%E9%80%82%E5%BA%94%E6%94%B6%E5%B1%95"><span class="toc-number">2.1.2.2.</span> <span class="toc-text">导航栏的滚动自适应收展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E5%AF%BC%E8%88%AA%E6%A0%8F"><span class="toc-number">2.1.2.3.</span> <span class="toc-text">移动端的导航栏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Algolia%E6%90%9C%E7%B4%A2%E9%85%8D%E7%BD%AE%EF%BC%88%E4%B8%8D%E7%94%A8%E4%BA%86%EF%BC%89"><span class="toc-number">2.1.2.4.</span> <span class="toc-text">Algolia搜索配置（不用了）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E9%85%8D%E7%BD%AE"><span class="toc-number">2.1.2.5.</span> <span class="toc-text">本地搜索配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E5%9B%BEtop-img%E9%AD%94%E6%94%B9"><span class="toc-number">2.1.3.</span> <span class="toc-text">头图top_img魔改</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">背景图的处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E4%B8%AA%E9%80%89%E9%A1%B9%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">四个选项的处理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%8D%95%E9%A1%B5article"><span class="toc-number">2.2.</span> <span class="toc-text">文章单页article</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E9%93%BE%E6%8E%A5abbrlink%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.2.1.</span> <span class="toc-text">文章链接abbrlink设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E5%9B%BE%E6%A0%87%E9%A2%98%E5%B0%8F%E6%94%B9"><span class="toc-number">2.2.2.</span> <span class="toc-text">头图标题小改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E4%B8%AD%E7%9A%84%E9%AB%98%E4%BA%AE%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">2.2.3.</span> <span class="toc-text">内容中的高亮代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE%E6%94%B9%E4%BA%86%E9%A2%9C%E8%89%B2%E8%B7%9Ficon"><span class="toc-number">2.2.4.</span> <span class="toc-text">外挂标签改了颜色跟icon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown%E7%9A%84%E6%A0%87%E9%A2%98%E6%A0%B7%E5%BC%8F%E5%B0%8F%E6%94%B9"><span class="toc-number">2.2.5.</span> <span class="toc-text">markdown的标题样式小改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E6%96%87%E6%9C%ACsize%E7%A8%8D%E5%BE%AE%E8%B0%83%E5%A4%A7%E4%BA%86%E4%B8%80%E7%82%B9"><span class="toc-number">2.2.6.</span> <span class="toc-text">文章文本size稍微调大了一点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95%E8%BF%87%E9%95%BF%E8%B0%83%E6%95%B4"><span class="toc-number">2.2.7.</span> <span class="toc-text">文章目录过长调整</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E9%AD%94%E6%94%B9"><span class="toc-number">2.3.</span> <span class="toc-text">其他魔改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E7%95%99%E6%96%87%E7%AB%A0%E9%A1%B5%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%9A%84%E5%90%8C%E6%97%B6%EF%BC%8C%E5%8F%96%E6%B6%88%E9%A6%96%E9%A1%B5%E7%9A%84%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="toc-number">2.3.1.</span> <span class="toc-text">保留文章页侧边栏的同时，取消首页的侧边栏</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.</span> <span class="toc-text">待办事项</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background: #232836"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024  协调人</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-caret-down"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-caret-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">站内搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

@@ -17,6 +17,30 @@
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
     }
+    
+    hr {
+        border: none;
+        border-top: 1px dashed #999;
+        margin: 20px 0;
+    }
+
+    pa {
+        color: #999;
+        display: flex;
+        justify-content: right;
+    }
+
+    y {
+        color: #bd8748
+    }
+    
+    r {
+        color: #d60202
+    }
+    
+    g{
+        color: #999;
+    }
 
 /* 文章文字大小 */
 .post #content-inner {

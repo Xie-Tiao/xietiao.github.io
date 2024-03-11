@@ -2682,7 +2682,7 @@ h1.page-title + .tag-cloud-list {
   overflow-y: scroll;
   overflow-y: overlay;
   margin: 0 -24px;
-  max-height: calc(100vh - 120px);
+  max-height: calc(90vh - 120px);
 }
 @media screen and (max-width: 900px) {
   #aside-content #card-toc .toc-content {
@@ -4252,6 +4252,7 @@ mjx-assistive-mml {
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s;
+  position: relative;
 }
 .bilibili_box:hover {
   border-color: #954e3e;
@@ -4306,7 +4307,7 @@ mjx-assistive-mml {
 .bilibili_box .bilibili_info {
   padding: 10px 10px 10px 18px;
   line-height: 1;
-  width: 100%;
+  width: calc(100% - 200px);
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;

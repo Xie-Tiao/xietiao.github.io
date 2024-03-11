@@ -182,8 +182,8 @@
       fetch('https://api.320.ink/api/b?id=BV15q4y1i74D').then(res=>res.json()).then(data=>{
         dom.innerHTML = `
         <div class="bilibili_cover">
-          <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
-          <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="${data.pic + '&h=300'}" class="no-lazyload">
+          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon nolazyload">
+          <img src="${data.pic + '&h=300'}" class="nolazyload">
           <span>00:26</span>
         </div>
         <div class="bilibili_info">
@@ -196,7 +196,7 @@
           </div>
           <div class="owner">
             <span class="bilibilitip">视频</span>
-            <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="${data.face + '&h=100'}" class="no-lazyload">
+            <img src="${data.face + '&h=100'}" class="nolazyload">
             <span>${data.owner}</span>
           </div>
         </div>
@@ -228,8 +228,8 @@
       fetch('https://api.320.ink/api/b?id=BV1JK411x7YN').then(res=>res.json()).then(data=>{
         dom.innerHTML = `
         <div class="bilibili_cover">
-          <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
-          <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="${data.pic + '&h=300'}" class="no-lazyload">
+          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon nolazyload">
+          <img src="${data.pic + '&h=300'}" class="nolazyload">
           <span>01:21</span>
         </div>
         <div class="bilibili_info">
@@ -242,7 +242,7 @@
           </div>
           <div class="owner">
             <span class="bilibilitip">视频</span>
-            <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="${data.face + '&h=100'}" class="no-lazyload">
+            <img src="${data.face + '&h=100'}" class="nolazyload">
             <span>${data.owner}</span>
           </div>
         </div>

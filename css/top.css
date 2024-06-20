@@ -1,108 +1,58 @@
-.top {
-    /* -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    width: 100%;
-    height: auto;
-    margin-top: 0px;
-    left: 0px;
-    right: auto;
+#resume {
     position: absolute;
-	justify-content: center;
-    vertical-align: top; */
-    background-image: url(/img/bg.png);
-    /* padding-top: 0px;
-    top: 0px;
-    z-index: 0;
-	display: flex;
-	flex-direction: row; */
-}
-
-#topimg{
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    max-width: 95%;
-    max-height: 95%;
-}
-
-.topimg_test{
-	-webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    width: 100%;
-    height: auto;
-    margin-top: 0px;
-    left: 0px;
-    right: auto;
-    position: absolute;
-    justify-content: center;
-    vertical-align: top;
-    background-image: url(/img/bg.png);
-    padding-top: 0px;
-    top: 0px;
-    z-index: 1;
-    opacity: 0.5;
-	display: flex;
-}
-.option_1{
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    width: auto;
-    height: 17.5vw;
-    margin: 0px;
-    left: 0%;
-    right: 0%;
-    position: absolute;
-    text-align: center;
-    padding-top: 0px;
-    padding-left: 0px;
-    top: 8vw;
-    z-index: 1;
-}
-
-#resume{
-    position: relative;
     left: 21vw;
-    top: 2vw;
-    width: fit-content;
+    top: 10vw;
 }
 
-#works{
-    position: relative;
-    left: 73vw;
-    top: -4vw;
-    width: fit-content;
-}
-
-.option_2{
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    width: auto;
-    height: 17.5vw;
-    margin: 0px;
-    left: 0%;
-    right: 0%;
+#works {
     position: absolute;
-    text-align: center;
-    padding-top: 0px;
-    padding-left: 0px;
-    top: 25.5vw;
-    z-index: 1;
+    left: 73vw;
+    top: 10vw;
 }
 
-#articles{
-    position: relative;
+#articles {
+    position: absolute;
     left: 27vw;
-    top: 2vw;
-    width: fit-content;
+    top: 27.5vw;
 }
 
-#contact{
-    position: relative;
+#contact {
+    position: absolute;
     left: 62vw;
-    top: -5.9vw;
-    width: fit-content;
+    top: 29vw;
+}
+
+#resume img:hover {
+    content: url('/img/简介1.png');
+}
+
+#works img:hover {
+    content: url('/img/作品1.png');
+}
+
+#articles img:hover {
+    content: url('/img/文章1.png');
+}
+
+#contact img:hover {
+    content: url('/img/联系1.png');
+}
+
+#payment {
+    position: absolute;
+    left: 1vw;
+    top: 30.5vw;
+    width: 14vw;
+    height: 10vw;
+}
+
+.hover-image {
+    display: none;
+    position: absolute;
+    pointer-events: none;
+    /* Prevent the image from interfering with mouse events */
+}
+
+#payment:hover .hover-image {
+    display: block;
 }

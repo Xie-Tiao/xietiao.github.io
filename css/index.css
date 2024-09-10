@@ -4772,6 +4772,41 @@ blockquote.pullquote.right {
 .toggle > .toggle-content {
   margin: 30px 24px;
 }
+.collapse {
+  margin-bottom: 20px;
+  border: none;
+}
+.collapse > .collapse-button {
+  padding: 6px 15px;
+  background-color: transparent;
+  color: #1f2d3d;
+  cursor: pointer;
+  border-bottom: 1px solid #1f2d3d;
+  border-radius: 0;
+}
+.collapse > .collapse-button:hover {
+  border: 1px solid #1f2d3d;
+}
+.collapse > .collapse-button::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f067";
+  float: right;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out;
+  -ms-transition: -ms-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+.collapse > .collapse-button::marker {
+  content: none;
+}
+.collapse[open] > .collapse-button::after {
+  content: "\f068";
+}
+.collapse > .collapse-content {
+  margin: 30px 24px;
+}
 #article-container .inline-img {
   display: inline;
   margin: 0 3px;

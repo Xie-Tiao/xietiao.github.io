@@ -56,3 +56,12 @@
 #payment:hover .hover-image {
     display: block;
 }
+
+#bangumi {
+    position: absolute;
+    left: 1vw;
+    top: 9vw;
+    width: 14vw;
+    height: 18vw;
+    cursor: pointer;
+}
